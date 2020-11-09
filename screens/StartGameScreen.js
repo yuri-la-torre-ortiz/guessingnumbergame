@@ -11,7 +11,12 @@ const StartGameScreen = (props) => {
       <Text style={styles.title}>Start a New Game!</Text>
       <Card style={styles.inputContainer}>
         <Text>Select a number:</Text>
-        <Input style={styles.input} />
+        <Input
+          style={styles.input}
+          blurOnSubmit
+          autoCorrect={false}
+          keyboardType="numeric"
+        />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
             <Button title="Reset" onPress={() => {}} color={Colors.secondary} />
