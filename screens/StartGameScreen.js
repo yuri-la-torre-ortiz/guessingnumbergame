@@ -16,6 +16,7 @@ const StartGameScreen = (props) => {
           blurOnSubmit
           autoCorrect={false}
           keyboardType="numeric"
+          maxLength={2}
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
