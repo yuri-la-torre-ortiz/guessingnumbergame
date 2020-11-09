@@ -9,7 +9,11 @@ const StartGameScreen = (props) => {
   const [enteredValue, setEnteredValue] = useState("");
 
   const numberInputHandler = (inputText) => {
-    setEnteredValue(inputText.replace(/[^0-9]/g, ''));
+    setEnteredValue(inputText.replace(/[^0-9]/g, ""));
+  };
+
+  const resetInputHandler = () => {
+    setEnteredValue("");
   };
 
   return (
@@ -28,7 +32,11 @@ const StartGameScreen = (props) => {
         />
         <View style={styles.buttonContainer}>
           <View style={styles.button}>
-            <Button title="Reset" onPress={() => {}} color={Colors.secondary} />
+            <Button
+              title="Reset"
+              onPress={resetInputHandler}
+              color={Colors.secondary}
+            />
           </View>
           <View style={styles.button}>
             <Button title="Confirm" onPress={() => {}} />
