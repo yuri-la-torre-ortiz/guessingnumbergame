@@ -51,6 +51,6 @@ const styles = StyleSheet.create({
     height: 70,
   },
   number: {
-    height: 50,
+    height: 60,
   },
 });
