@@ -23,7 +23,9 @@ const GameScreen = (props) => {
   return (
     <View style={styles.screen}>
       <Text>Opponent's Guess</Text>
-      <NumberContainer>{currentGuess}</NumberContainer>
+      <View style={styles.number}>
+        <NumberContainer>{currentGuess}</NumberContainer>
+      </View>
       <Card style={styles.buttonContainer}>
         <Button title="LOWER" onPress={() => {}} />
         <Button title="GREATER" onPress={() => {}} />
@@ -47,5 +49,8 @@ const styles = StyleSheet.create({
     width: 300,
     maxWidth: "80%",
     height: 70,
+  },
+  number: {
+    height: 50,
   },
 });
