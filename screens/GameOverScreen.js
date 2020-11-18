@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const GameOverScreen = () => {
+const GameOverScreen = (props) => {
   return (
     <View style={styles.screen}>
       <Text>Game Over</Text>
