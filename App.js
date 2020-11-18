@@ -11,6 +11,11 @@ const App = (props) => {
   const [userNumber, setUserNumber] = useState();
   const [guessRounds, setGuessRounds] = useState(0);
 
+  const newGameHandler = () => {
+    setGuessRounds(0);
+    setUserNumber(null);
+  };
+
   const startGameHandler = (selectedNumber) => {
     setUserNumber(selectedNumber);
     setGuessRounds(0);
@@ -28,7 +33,11 @@ const App = (props) => {
     );
   } else if (guessRounds > 0) {
     content = (
-      <GameOverScreen roundsNumber={guessRounds} userNumber={userNumber} />
+      <GameOverScreen
+        roundsNumber={guessRounds}
+        userNumber={userNumber}
+        onRestart={newGameHandler}
+      />
     );
   }
 
