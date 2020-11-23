@@ -26,6 +26,7 @@ const App = (props) => {
       <AppLoading
         startAsync={fetchFonts}
         onFinish={() => setDataLoaded(true)}
+        onError={(err) => console.log(err)}
       />
     );
     // startAsync needs to have a function returning a promise
