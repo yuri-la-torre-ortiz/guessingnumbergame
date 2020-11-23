@@ -22,7 +22,13 @@ const App = (props) => {
   const [dataLoaded, setDataLoaded] = useState(false);
 
   if (!dataLoaded) {
-    return <AppLoading />;
+    return (
+      <AppLoading
+        startAsync={fetchFonts}
+        onFinish={() => setDataLoaded(true)}
+      />
+    );
+    // startAsync needs to have a function returning a promise
   }
 
   const newGameHandler = () => {
