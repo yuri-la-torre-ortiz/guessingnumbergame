@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 300,
     overflow: "hidden",
+    marginVertical: 40,
   },
 });
